@@ -14,12 +14,7 @@ app.use(cors())
 
 
 
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '/index.html'));
-})
-
-
-app.post('/', (req, res) => {
+app.post('/api', (req, res) => {
   let t_count = req.body.total;
   let total_student_list = req.body.total_student_list;
   let queue_student_list = req.body.queue_student_list;
