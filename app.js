@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = 5000
+const port = 3000
 const path = require('path');
 var cors = require('cors')
 
@@ -50,6 +50,6 @@ function findMissingStudent(t_count, total_list, queue_list) {
 
 
 
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
 })
