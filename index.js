@@ -55,11 +55,11 @@ window.onload = () => {
   }
 
   function loadTotalStudent() {
-    return JSON.parse(localStorage.getItem("total_student"));
+    return JSON.parse(localStorage.getItem("total_student")) || [];
   }
 
   function loadQueueStudent() {
-    return JSON.parse(localStorage.getItem("queue_student"));
+    return JSON.parse(localStorage.getItem("queue_student")) || [];
   }
 
   function updateTotalState(name = "") {
@@ -193,7 +193,7 @@ window.onload = () => {
       queue_student_list: queue_student_array,
     };
 
-    fetch("http://localhost:3000", {
+    fetch("https://missing-student-finder.herokuapp.com/api", {
       method: "POST",
       body: JSON.stringify(req_body),
       headers: { "Content-type": "application/json; charset=UTF-8" },
