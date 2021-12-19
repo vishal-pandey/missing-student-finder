@@ -178,7 +178,7 @@ window.onload = () => {
     updateQueueState(student_name);
     search_student_input.value = "";
     search_student_array = [];
-    // loadDeleteEvent()
+    loadDeleteEvent()
   }
 
   document.querySelector(".find-missing-student-button").onclick = () => {
@@ -192,6 +192,8 @@ window.onload = () => {
       total_student_list: total_student_array,
       queue_student_list: queue_student_array,
     };
+
+    document.querySelector(".progress").style.display = "block"
 
     fetch("https://missing-student-finder.herokuapp.com/api", {
       method: "POST",
@@ -207,6 +209,7 @@ window.onload = () => {
         // document.querySelector(".missing-students-list").innerHTML =
         //   data.missing_student_list;
         addStudentToMissingList(data.missing_student_list);
+        document.querySelector(".progress").style.display = "none"
       });
   }
 
