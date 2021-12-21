@@ -9,51 +9,56 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
   <link rel="stylesheet" href="style.css">
+
+  <script src="https://cdn.lr-in.com/LogRocket.min.js" crossorigin="anonymous"></script>
+  <script>window.LogRocket && window.LogRocket.init('zlm0pg/lumiq-test');</script>
 </head>
 <body>
   <h1>Missing Student Finder</h1>
   <section class="container">
-    <section class="total-section col-sm-4">
-      <h2>Total Students in Class</h2>
-      <input type="text" class="total-student-input" placeholder='Enter Student Name'>
-      <button class="total-add-button btn btn-default">Add</button>
-      <ul class="total-student-list"></ul>
-    </section>
-    <section class="queue-section col-sm-4">
-      <h2>Students in Queue</h2>
-      <div class="search-result well">
-        <span style="color: grey;">Search Result (Press Enter to add)</span>
-        <ul class="search-result-list"></ul>
-      </div>
-      <input type="text" placeholder="Search Student in Class.." class="search-student-input">
-      <button class="queue-add-button btn btn-default">Add</button>
-      <ul class="queue-student-list"></ul>
-    </section>
-    <section class="result-section col-sm-4">
-      <h2>Missing Student in the queue</h2>
-      <div class="progress">
-        <div class="progress-bar progress-bar-striped active" role="progressbar"
-        aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%">
-          Fetching result
+    <section class="row">
+      <section class="total-section col-sm-4">
+        <h2>Total Students in Class</h2>
+        <input type="text" class="total-student-input" placeholder='Enter Student Name'>
+        <button class="total-add-button btn btn-default">Add</button>
+        <ul class="total-student-list"></ul>
+      </section>
+      <section class="queue-section col-sm-4">
+        <h2>Students in Queue</h2>
+        <div class="search-result well">
+          <span style="color: grey;">Search Result (Press Enter to add)</span>
+          <ul class="search-result-list"></ul>
         </div>
-      </div>
-      <button class="find-missing-student-button btn btn-primary">Find Missing Student</button> <br>
-
-      <table class="table table-bordered">
-        <tr>
-          <td>Total Number Students</td>
-          <td class="total-students-count"></td>
-        </tr>
-        <tr>
-          <td>Number of Missing Students</td>
-          <td class="missing-students-count"></td>
-        </tr>
-      </table>
-
-      <span>Missing Students : </span> <br>
-      <div class="missing-student-result">
-        <ul class="missing-students-list"></ul>
-      </div>
+        <input type="text" placeholder="Search Student in Class.." class="search-student-input">
+        <button class="queue-add-button btn btn-default">Add</button>
+        <ul class="queue-student-list"></ul>
+      </section>
+      <section class="result-section col-sm-4">
+        <h2>Missing Student in the queue</h2>
+        <div class="progress">
+          <div class="progress-bar progress-bar-striped active" role="progressbar"
+          aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%">
+            Fetching result
+          </div>
+        </div>
+        <button class="find-missing-student-button btn btn-primary">Find Missing Student</button> <br>
+  
+        <table class="table table-bordered">
+          <tr>
+            <td>Total Number Students</td>
+            <td class="total-students-count"></td>
+          </tr>
+          <tr>
+            <td>Number of Missing Students</td>
+            <td class="missing-students-count"></td>
+          </tr>
+        </table>
+  
+        <span>Missing Students : </span> <br>
+        <div class="missing-student-result">
+          <ul class="missing-students-list"></ul>
+        </div>
+      </section>
     </section>
   </section>
   
